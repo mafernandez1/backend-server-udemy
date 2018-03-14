@@ -13,7 +13,7 @@ app.get('/:tipo/:img', (req, res, next) => {
             path = './assests/no-img.jpg';
         }
 
-        res.sendfile(path);
+        res.sendFile(path);
     });
 
 });

@@ -13,6 +13,7 @@ var usuarioSchema = new Schema({
     password: { type: String, required: [true, 'La contraseña es requerida'] },
     img: { type: String },
     role: { type: String, required: [true, 'El rol es requerido'], default: 'USER_ROLE', enum: rolesValidos },
+    google: { type: Boolean, required: true, default: false }
 });
 
 usuarioSchema.plugin(uniqueValidator, { message: 'Ya existe un {PATH} registrado para otro usuario' });
